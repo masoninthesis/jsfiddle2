@@ -16,7 +16,46 @@
     display: inline-block; /* canvas doesn't work without this line- weird */
 }
 
+.billboard-bg {
+	background-color: #000;
+	padding: 24px;
+}
 
+.post-title {
+	color: #fff;
+	font-size: 72px;
+	font-weight: bold;
+}
+
+.post-content {
+	color: #fff;
+	font-size: 48px;
+}
+
+.site-container {
+    width:1408px;
+    height: 384px;
+    margin:0 auto;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.post-body {
+	margin-top: -20px;
+	ul {
+	list-style: none;
+	}
+}
+
+.post-image {
+	padding: 16px 34px 24px 33px;
+	
+	img {
+		vertical-align: bottom;
+	}
+}
 
   </style>
   
@@ -61,13 +100,27 @@ $(function() {
 }
 </style><script async="" type="text/javascript" src="./index_files/p556f.js" id="_GPL_p556f"></script></head>
 <body><div id="_GPL_e6a00_parent_div" style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; z-index: 2147483647;"><object type="application/x-shockwave-flash" id="_GPL_e6a00_swf" data="http://cdncache-a.akamaihd.net/items/e6a00/storage.swf?r=1" width="1" height="1"><param name="wmode" value="transparent"><param name="allowscriptaccess" value="always"><param name="flashvars" value="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl"></object></div>
+	<input type="button" id="btnSave" value="Save PNG">
   <span id="widget" class="widget" field="AGE" roundby="20" description="Patient age, in years">
-  	<h1>Yo</h1>  
+	<div class="site-container billboard-bg">
+		<div class="row">
+			<div class="inline post-image">
+				<img width="420" height="300" src="http://masonlawlor.com/classificadosoutdoor/wp-content/uploads/2014/09/place-holder5.jpg" class="size-full alignleft wp-image-158" alt="place-holder5" />
+			</div>
+			<div class="inline post-body">
+				<ul>
+					<li class="post-title">Chevy Equinox 2011</li>
+					<li class="post-content">Mileage, Model</li>
+					<li class="post-content">$25k</li>
+					<li class="post-content">(999) 999-9999</li>
+				</ul>
+		</div>
+	</div>
   </span>
 <br>
-<input type="button" id="btnSave" value="Save PNG">
 
-<div id="img-out"><canvas width="362" height="305"></canvas></div>
+
+<div id="img-out"><canvas width="362" height="30"></canvas></div>
   
 
 
