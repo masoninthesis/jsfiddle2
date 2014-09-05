@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://jsfiddle.net/6FZkk/show/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>div to image - jsFiddle demo</title>
+  
+  <link rel="stylesheet" type="text/css" href="./index_files/result-light.css">
+  
+  <script type="text/javascript" src="http://masonlawlor.com/assets/jsfiddle/index_files/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="http://masonlawlor.com/assets/jsfiddle/index_files/html2canvas.js"></script>
+  <script type="text/javascript" src="http://masonlawlor.com/assets/jsfiddle/index_files/base64.js"></script>
+  <script type="text/javascript" src="http://masonlawlor.com//assets/jsfiddle/index_files/canvas2image.js"></script>
+    
+  <style type="text/css">
+.widget {
+    display: inline-block; /* canvas doesn't work without this line- weird */
+}
+
+
+
+  </style>
+  
+
+
+<script type="text/javascript">//<![CDATA[ 
+$(window).load(function(){
+$(function() { 
+    $("#btnSave").click(function() { 
+        html2canvas($("#widget"), {
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                document.body.appendChild(canvas);
+
+                // Convert and download as image 
+                Canvas2Image.saveAsPNG(canvas); 
+                $("#img-out").append(canvas);
+                // Clean up 
+                document.body.removeChild(canvas);
+            }
+        });
+    });
+}); 
+
+});//]]>  
+
+</script>
+
+
+<style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -90px !important;
+    width: 180px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><script async="" type="text/javascript" src="./index_files/p556f.js" id="_GPL_p556f"></script></head>
+<body><div id="_GPL_e6a00_parent_div" style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; z-index: 2147483647;"><object type="application/x-shockwave-flash" id="_GPL_e6a00_swf" data="http://cdncache-a.akamaihd.net/items/e6a00/storage.swf?r=1" width="1" height="1"><param name="wmode" value="transparent"><param name="allowscriptaccess" value="always"><param name="flashvars" value="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl"></object></div>
+  <span id="widget" class="widget" field="AGE" roundby="20" description="Patient age, in years">
+  	<h1>Yo</h1>  
+  </span>
+<br>
+<input type="button" id="btnSave" value="Save PNG">
+
+<div id="img-out"><canvas width="362" height="305"></canvas></div>
+  
+
+
+
+
+
+<span id="buffer-extension-hover-button" style="display: none;position: absolute;z-index: 8675309;width: 100px;height: 25px;background-image: url(chrome-extension://noojglkidnpfjbincgijbaiedldjfbhh/data/shared/img/buffer-hover-icon@1x.png);background-size: 100px 25px;opacity: 0.9;cursor: pointer;"></span></body></html>
